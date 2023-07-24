@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Messenger</title>
-    <link rel="stylesheet" href="./style.css"/>
-</head>
-<body>
-    <h1>Настройки пользователя</h1>
+    <h1>{{userSettingLabel}}</h1>
     <form action="/update_settings" method="post" enctype="multipart/form-data">
-        <!-- Изменение информации о пользователе -->
         <label for="first_name">Имя:</label>
         <input type="text" id="first_name" name="first_name" required>
 
@@ -28,11 +18,10 @@
         <label for="phone">Телефон:</label>
         <input type="tel" id="phone" name="phone" required>
 
-        <!-- Изменение аватара -->
         <label for="avatar">Аватар:</label>
         <input type="file" id="avatar" name="avatar" accept="image/*">
 
-        <!-- Изменение пароля -->
+
         <label for="oldPassword">Старый пароль:</label>
         <input type="password" id="oldPassword" name="oldPassword" required>
 
@@ -41,5 +30,3 @@
 
         <input type="submit" value="Сохранить изменения">
     </form>
-</body>
-</html>

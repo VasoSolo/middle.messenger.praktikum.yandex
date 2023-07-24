@@ -5,11 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "node server.js",
+    "start": "node server.cjs",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": ">= 12"
+  },
   "devDependencies": {
+    "@types/express": "^4.17.17",
     "@types/node": "^20.4.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.0"
