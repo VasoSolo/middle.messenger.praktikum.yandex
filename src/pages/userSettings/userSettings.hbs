@@ -1,0 +1,32 @@
+    <h1>{{userSettingLabel}}</h1>
+    <form action="/update_settings" method="post" enctype="multipart/form-data">
+        <label for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="second_name">Фамилия:</label>
+        <input type="text" id="second_name" name="second_name" required>
+
+        <label for="display_name">Отображаемое имя:</label>
+        <input type="text" id="display_name" name="display_name" required>
+
+        <label for="login">Логин:</label>
+        <input type="text" id="login" name="login" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="avatar">Аватар:</label>
+        <input type="file" id="avatar" name="avatar" accept="image/*">
+
+
+        <label for="oldPassword">Старый пароль:</label>
+        <input type="password" id="oldPassword" name="oldPassword" required>
+
+        <label for="newPassword">Новый пароль:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+
+        <input type="submit" value="Сохранить изменения">
+    </form>

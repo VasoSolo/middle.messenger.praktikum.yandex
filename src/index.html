@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <main class="appContainer">
+    <nav>
+      <a href="/registration">Регистрация</a>
+      <a href="/authorization">Авторизация</a>
+      <a href="/userSettings">Настройки пользователя</a>
+      <a href="/error404">404</a>
+      <a href="/error500">500</a>
+    </nav>
+    <div id="app"></div>
+    <script src="pages/authorization/index.js" type="module"></script>
+    <script src="pages/registration/index.js" type="module"></script>
+    <script src="pages/userSettings/index.js" type="module"></script>
+    <script src="pages/error/404/index.js" type="module"></script>
+    <script src="pages/error/500/index.js" type="module"></script>
+  </main>
+</body>
+</html>
