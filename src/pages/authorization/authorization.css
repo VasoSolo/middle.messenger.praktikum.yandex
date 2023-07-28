@@ -23,8 +23,8 @@ body {
     width: 100%;
 }
 
-.login-box input[type="text"],
-.login-box input[type="password"] {
+.inputPassword,
+.inputLogin {
     width: 93%;
     padding: 10px;
     margin-bottom: 10px;
@@ -32,7 +32,7 @@ body {
     border-radius: 3px;
 }
 
-.login-box input[type="submit"] {
+.authorizationButton {
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
@@ -42,6 +42,25 @@ body {
     cursor: pointer;
 }
 
-.login-box input[type="submit"]:hover {
+.register-link {
+    /* Add your register link styles here */
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.register-link a {
+    /* Add your link styles here */
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    /* Add your link hover styles here */
+    text-decoration: underline;
+}
+
+
+.authorizationButton:hover {
     background-color: #45a049;
 }
