@@ -8,9 +8,9 @@
             <input type="text" placeholder="Поиск">
         </div>
         <div class="chat-list" id="chatList">
-            <div class="chat-list-item" onclick="showChat(1)">Chat 1</div>
-            <div class="chat-list-item" onclick="showChat(2)">Chat 2</div>
-            <div class="chat-list-item" onclick="showChat(3)">Chat 3</div>
+            <div class="chat-list-item">Chat 1</div>
+            <div class="chat-list-item">Chat 2</div>
+            <div class="chat-list-item">Chat 3</div>
         </div>
     </div>
     <div class="chat-content" id="chatContent">
@@ -21,8 +21,10 @@
 
         </div>
         <div class="message-input">
-            <input type="text" name="message" id="message" placeholder="Введите сообщение">
-            <button onclick="sendMessage()">Отправить</button>
+            {{!-- <input type="text" name="message" id="message" placeholder="Введите сообщение"> --}}
+            {{{chatListInput}}}
+            {{!-- <button onclick="sendMessage()">Отправить</button> --}}
+            {{{chatListButton}}}
         </div>
     </div>
 </div>

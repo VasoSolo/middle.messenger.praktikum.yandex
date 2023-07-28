@@ -1,22 +1,22 @@
-.container404 {
+.container500 {
     text-align: center;
 }
 
-.container404 h1 {
+.container500 h1 {
     font-size: 48px;
     color: #FF5733;
 }
 
-.container404 p {
+.container500 p {
     font-size: 18px;
     color: #666;
 }
 
-.container404 a {
+.container500 a {
     color: #007BFF;
     text-decoration: none;
 }
 
-.container404 a:hover {
+.container500 a:hover {
     text-decoration: underline;
 }

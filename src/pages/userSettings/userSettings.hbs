@@ -1,6 +1,7 @@
-    <h1>{{userSettingLabel}}</h1>
-    <form action="/update_settings" method="post" enctype="multipart/form-data">
-        <label for="first_name">Имя:</label>
+<div class="userSettingContainer">
+    <h1 class="userSettingLabel">Настройки пользователя</h1>
+    <form>
+        {{!-- <label for="first_name">Имя:</label>
         <input type="text" id="first_name" name="first_name" required>
 
         <label for="second_name">Фамилия:</label>
@@ -16,17 +17,29 @@
         <input type="email" id="email" name="email" required>
 
         <label for="phone">Телефон:</label>
-        <input type="tel" id="phone" name="phone" required>
+        <input type="tel" id="phone" name="phone" required> --}}
+        {{{userSettingsFirstName}}}
+        {{{userSettingssecondName}}}
+        {{{userSettingsLogin}}}
+        {{{userSettingsEmail}}}
+        {{{userSettingsPassword}}}
+        {{{userSettingsPhone}}}
 
-        <label for="avatar">Аватар:</label>
-        <input type="file" id="avatar" name="avatar" accept="image/*">
 
+        {{!-- <label for="avatar">Аватар:</label>
+        <input type="file" id="avatar" name="avatar" accept="image/*"> --}}
 
+{{!-- 
         <label for="oldPassword">Старый пароль:</label>
         <input type="password" id="oldPassword" name="oldPassword" required>
 
         <label for="newPassword">Новый пароль:</label>
-        <input type="password" id="newPassword" name="newPassword" required>
+        <input type="password" id="newPassword" name="newPassword" required> --}}
+        {{{userSettingsOldPassword}}}
+        {{{userSettingsNewPassword}}}
 
-        <input type="submit" value="Сохранить изменения">
+        {{{userSettingsButton}}}
+
+        {{!-- <input type="submit" value="Сохранить изменения"> --}}
     </form>
+</div>

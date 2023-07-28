@@ -4,11 +4,9 @@ import Block from "../../services/block";
 import template from "./authorization.hbs";
 import { focusin, focusout, submit } from "../../services/validation";
 
-interface IAuthorization {}
-
 export class Authorization extends Block {
-  constructor(props: IAuthorization) {
-    super(props);
+  constructor() {
+    super();
   }
 
   protected init(): void {
@@ -19,7 +17,7 @@ export class Authorization extends Block {
       label: "",
       placeholder: "login",
       error: "",
-      value: typeof this.props.login === "string" ? this.props.login : "",
+      value: "",
       events: {
         focusOut: focusout,
         focusIn: focusin,

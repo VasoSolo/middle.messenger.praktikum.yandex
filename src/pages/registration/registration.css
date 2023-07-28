@@ -1,9 +1,9 @@
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+} */
 .registration-box {
     background-color: #fff;
     padding: 30px;
@@ -17,11 +17,7 @@ h2 {
 form {
     margin-top: 20px;
 }
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="submit"] {
+.input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -29,11 +25,11 @@ input[type="submit"] {
     border-radius: 3px;
     font-size: 16px;
 }
-input[type="submit"] {
+.registrationButton {
     background-color: #4CAF50;
     color: #fff;
     cursor: pointer;
 }
-input[type="submit"]:hover {
+.registrationButton:hover {
     background-color: #45a049;
 }

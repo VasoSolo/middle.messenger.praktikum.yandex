@@ -1,6 +1,12 @@
 @import url("pages/authorization/authorization.css");
+@import url("pages/registration/registration.css");
+@import url("pages/chatList/chatList.css");
+@import url("pages/userSettings/userSettings.css");
+@import url("pages/error/404/error404.css");
+@import url("pages/error/500/error500.css");
 
-.appContainer{
+
+.containerApp{
     display: flex;
     flex-direction: column;
     align-items: stretch;

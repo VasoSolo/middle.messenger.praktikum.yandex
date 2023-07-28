@@ -6,23 +6,25 @@ interface IValiRule {
 const validationRules: Record<string, IValiRule> = {
   first_name: {
     regExp: /^[А-ЯA-Z]{1}[а-яa-z-]*$/,
-    errorMessage: "Первая буква должна быть заглавной, без пробелов и без цифр",
+    errorMessage:
+      "Первая буква в имени должна быть заглавной,имя должно быть без пробелов и без цифр",
   },
 
   second_name: {
     regExp: /^[А-ЯA-Z]{1}[а-яa-z-]*$/,
-    errorMessage: "Первая буква должна быть заглавной, без пробелов и без цифр",
+    errorMessage:
+      "Первая буква в фамилии должна быть заглавной,фамилия должна быть без пробелов и без цифр",
   },
 
   email: {
-    regExp: /^[A-Za-z0-9-]+@[A-Za-z]+(\.[A-Za-z]+)+$/,
-    errorMessage: "Вы ввели не email ",
+    regExp: /^[A-Za-z0-9_\-]+@[A-Za-z]+\.[A-Za-z]+$/,
+    errorMessage: "Вы ввели некорректный email ",
   },
 
   login: {
     regExp: /^(?!^\d+)[a-zA-Z0-9-_]{3,20}$/,
     errorMessage:
-      "Логин от 3 до 20 символов, латиница, может содержать цифры, но не состоять из них, без пробелов, без спецсимволов (допустимы дефис и нижнее подчёркивание)",
+      "Логин должен содержать от 3 до 20 символов: латиница, может содержать цифры, но не состоять из них, без пробелов, без спецсимволов (допустимы дефис и нижнее подчёркивание)",
   },
 
   phone: {
@@ -77,9 +79,9 @@ export const focusout = (event: InputEvent): void => {
 };
 
 export const submit = (event: Event): void => {
+  event.preventDefault();
   let validData: Record<string, string> = {};
   let allIsValid: boolean | undefined = true;
-  event.preventDefault();
   const formInputs = document.querySelectorAll<HTMLInputElement>("input");
   formInputs.forEach((input: HTMLInputElement) => {
     const currentValidationInput = validationRules[input.name];
