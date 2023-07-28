@@ -1,0 +1,30 @@
+<div class="chat-container-big">
+    <div class="chat-list-container">
+        <div class="profile-button">
+            <i class="fas fa-cog"></i>Профиль
+        </div>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Поиск">
+        </div>
+        <div class="chat-list" id="chatList">
+            <div class="chat-list-item">Chat 1</div>
+            <div class="chat-list-item">Chat 2</div>
+            <div class="chat-list-item">Chat 3</div>
+        </div>
+    </div>
+    <div class="chat-content" id="chatContent">
+        <div class="chat-container">
+            <div class="span-container">    
+                <span >Выберите чат чтобы отправить сообщение</span>
+            </div>
+
+        </div>
+        <div class="message-input">
+            {{!-- <input type="text" name="message" id="message" placeholder="Введите сообщение"> --}}
+            {{{chatListInput}}}
+            {{!-- <button onclick="sendMessage()">Отправить</button> --}}
+            {{{chatListButton}}}
+        </div>
+    </div>
+</div>

@@ -12,11 +12,7 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"],
-input[type="file"] {
+.input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -24,7 +20,11 @@ input[type="file"] {
     border-radius: 5px;
 }
 
-input[type="submit"] {
+.user-setting-label{
+    text-align: center;
+}
+
+.user-settings-button {
     background-color: #007BFF;
     color: #fff;
     border: none;
@@ -33,7 +33,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.user-settings-button:hover {
     background-color: #0056b3;
 }
 
