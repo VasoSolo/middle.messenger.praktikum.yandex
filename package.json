@@ -8,7 +8,9 @@
     "start": "node server.cjs",
     "prebuild": "tsc --noEmit",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint": "eslint src/**/*.ts",
+    "stylelint": "stylelint src/**/*.css"
   },
   "engines": {
     "node": ">= 12"
