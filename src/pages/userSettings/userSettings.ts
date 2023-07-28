@@ -1,5 +1,5 @@
 import { Button } from "../../components/button/index";
-import Input from "../../components/Input/index";
+import Input from "../../components/input";
 import Block from "../../services/block";
 import template from "./userSettings.hbs";
 import { focusin, focusout, submit } from "../../services/validation";
@@ -128,6 +128,7 @@ export class UserSettings extends Block {
   }
 
   protected render(): DocumentFragment {
+    console.log(template);
     return this.compile(template, this.props);
   }
 }

@@ -1,5 +1,5 @@
 import { Button } from "../../components/button/index";
-import Input from "../../components/Input/index";
+import Input from "../../components/input";
 import Block from "../../services/block";
 import template from "./authorization.hbs";
 import { focusin, focusout, submit } from "../../services/validation";
