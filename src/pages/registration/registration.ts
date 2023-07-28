@@ -91,7 +91,7 @@ export class Registration extends Block {
 
     this.children.registrationButton = new Button({
       label: "Зарегистрироваться",
-      buttonClass: "registrationButton",
+      buttonClass: "registration-button",
       typeButton: "submit",
       events: {
         click: submit,

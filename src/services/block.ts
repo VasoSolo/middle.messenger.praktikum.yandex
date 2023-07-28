@@ -16,7 +16,7 @@ class Block {
   private eventBus: () => EventBus;
   private _element: HTMLElement | null = null;
   protected refs: { [key: string]: HTMLElement } = {};
-  private _meta: { props: Record<string, unknown> | null };
+  // private _meta: { props: Record<string, unknown> | null };
 
   constructor(propsWithChildren: any = {}) {
     const eventBus = new EventBus();
@@ -96,13 +96,13 @@ class Block {
     );
   }
 
-  private _componentDidUpdate(oldProps: any, newProps: any) {
-    if (this.componentDidUpdate(oldProps, newProps)) {
+  private _componentDidUpdate() {
+    if (this.componentDidUpdate()) {
       this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
     }
   }
 
-  protected componentDidUpdate(oldProps: any, newProps: any) {
+  protected componentDidUpdate() {
     return true;
   }
 

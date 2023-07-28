@@ -11,7 +11,7 @@ export class Authorization extends Block {
 
   protected init(): void {
     this.children.authorizationLogin = new Input({
-      classInput: "input inputLogin",
+      classInput: "input input-login",
       name: "login",
       type: "text",
       label: "",
@@ -27,7 +27,7 @@ export class Authorization extends Block {
       },
     });
     this.children.authorizationPassword = new Input({
-      classInput: "input inputPassword",
+      classInput: "input input-password",
       name: "password",
       label: "",
       value: "",
@@ -41,7 +41,7 @@ export class Authorization extends Block {
     });
     this.children.authorizationSubmitButton = new Button({
       label: "Войти",
-      buttonClass: "authorizationButton",
+      buttonClass: "authorization-button",
       typeButton: "submit",
       events: {
         click: submit,

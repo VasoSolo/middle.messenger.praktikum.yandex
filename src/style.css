@@ -6,7 +6,7 @@
 @import url("pages/error/500/error500.css");
 
 
-.containerApp{
+.container-app{
     display: flex;
     flex-direction: column;
     align-items: stretch;

@@ -119,7 +119,7 @@ export class UserSettings extends Block {
 
     this.children.userSettingsButton = new Button({
       label: "Сохранить",
-      buttonClass: "userSettingsButton",
+      buttonClass: "user-settings-button",
       typeButton: "submit",
       events: {
         click: submit,

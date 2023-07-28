@@ -20,11 +20,11 @@ label {
     border-radius: 5px;
 }
 
-.userSettingLabel{
+.user-setting-label{
     text-align: center;
 }
 
-.userSettingsButton {
+.user-settings-button {
     background-color: #007BFF;
     color: #fff;
     border: none;
@@ -33,7 +33,7 @@ label {
     cursor: pointer;
 }
 
-.userSettingsButton:hover {
+.user-settings-button:hover {
     background-color: #0056b3;
 }
 
