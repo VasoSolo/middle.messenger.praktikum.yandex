@@ -1,5 +1,3 @@
-import { Button } from "../../../components/button/index";
-import Input from "../../../components/Input/index";
 import Block from "../../../services/block";
 import template from "./error404.hbs";
 

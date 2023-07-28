@@ -21,9 +21,6 @@ export class Authorization extends Block {
       events: {
         focusOut: focusout,
         focusIn: focusin,
-        input: ($event) => {
-          // console.log(event?.target);
-        },
       },
     });
     this.children.authorizationPassword = new Input({
