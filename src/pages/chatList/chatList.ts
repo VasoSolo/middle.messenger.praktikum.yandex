@@ -11,7 +11,7 @@ export class ChatList extends Block {
 
   protected init(): void {
     this.children.chatListInput = new Input({
-      classInput: "input chatListInput",
+      classInput: "input chat-list-input",
       name: "message",
       type: "text",
       label: "",
@@ -19,13 +19,13 @@ export class ChatList extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.chatListButton = new Button({
       label: "Отправить",
-      buttonClass: "registrationButton",
+      buttonClass: "chat-list-button",
       typeButton: "submit",
       events: {
         click: submit,
@@ -34,7 +34,6 @@ export class ChatList extends Block {
   }
 
   protected render(): DocumentFragment {
-    console.log(this.props);
     return this.compile(template, this.props);
   }
 }

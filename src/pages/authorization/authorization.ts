@@ -19,8 +19,8 @@ export class Authorization extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.authorizationPassword = new Input({
@@ -32,8 +32,8 @@ export class Authorization extends Block {
       placeholder: "password",
       type: "password",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.authorizationSubmitButton = new Button({
@@ -47,7 +47,6 @@ export class Authorization extends Block {
   }
 
   protected render(): DocumentFragment {
-    console.log(this.props);
     return this.compile(template, this.props);
   }
 }

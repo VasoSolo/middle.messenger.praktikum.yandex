@@ -45,11 +45,6 @@ const validationRules: Record<string, IValiRule> = {
       "Пароль должен от 8 до 40 символов, обязательно хотя бы одна заглавная буква и цифра",
   },
 
-  NewPasswordAgain: {
-    regExp: /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,40}$/,
-    errorMessage: "Password should be 8-40 symbols, capital letter and number",
-  },
-
   message: {
     regExp: /^.+$/,
     errorMessage: "Не может быть пустым",
@@ -58,8 +53,11 @@ const validationRules: Record<string, IValiRule> = {
 
 const validationCheck = (event: InputEvent): void => {
   const targetInput = event.target as HTMLInputElement;
+  // console.log("targetInput", targetInput);
   const parent = targetInput.parentElement;
-  const error = parent?.querySelector(".input_error");
+  // console.log("parent", parent);
+
+  const error = parent?.querySelector(".error");
   const nameInput = validationRules[targetInput.name];
   const isValid = nameInput.regExp.test(targetInput.value);
 
@@ -75,24 +73,31 @@ export const focusin = (event: InputEvent): void => {
 };
 
 export const focusout = (event: InputEvent): void => {
+  // console.log(event);
   validationCheck(event);
 };
 
 export const submit = (event: Event): void => {
+  // console.log(event);
   event.preventDefault();
   let validData: Record<string, string> = {};
   let allIsValid: boolean | undefined = true;
-  const formInputs = document.querySelectorAll<HTMLInputElement>("input");
+  const formInputs = document.querySelectorAll<HTMLInputElement>(".input");
+  // console.log("formInputs", formInputs);
   formInputs.forEach((input: HTMLInputElement) => {
+    const error = input.parentElement?.querySelector(".error");
     const currentValidationInput = validationRules[input.name];
     const { regExp } = currentValidationInput;
     if (input.value === "" || !regExp.test(input.value)) {
       console.error(currentValidationInput.errorMessage);
+      error!.textContent = currentValidationInput.errorMessage;
       allIsValid = false;
     } else {
+      error!.textContent = "";
       validData[input.name] = input.value.toString();
     }
   });
+  // console.log("allIsValid", allIsValid);
   if (allIsValid) {
     console.log(validData);
   }

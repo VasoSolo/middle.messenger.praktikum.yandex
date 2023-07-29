@@ -186,7 +186,7 @@ class Block {
     }
 
     Object.keys(events).forEach((eventName) => {
-      this._element!.addEventListener(eventName, events[eventName]);
+      this._element!.removeEventListener(eventName, events[eventName]);
     });
   }
 
