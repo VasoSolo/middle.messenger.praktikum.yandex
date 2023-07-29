@@ -19,8 +19,8 @@ export class Registration extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.registrationSecondName = new Input({
@@ -32,8 +32,8 @@ export class Registration extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.registrationLogin = new Input({
@@ -45,8 +45,8 @@ export class Registration extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.registrationEmail = new Input({
@@ -58,8 +58,8 @@ export class Registration extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.registrationPassword = new Input({
@@ -71,8 +71,8 @@ export class Registration extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.registrationPhone = new Input({
@@ -84,8 +84,8 @@ export class Registration extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
 
@@ -100,7 +100,6 @@ export class Registration extends Block {
   }
 
   protected render(): DocumentFragment {
-    console.log(this.props);
     return this.compile(template, this.props);
   }
 }

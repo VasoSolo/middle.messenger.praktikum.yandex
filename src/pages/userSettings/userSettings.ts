@@ -17,10 +17,11 @@ export class UserSettings extends Block {
       label: "Имя",
       placeholder: "Имя",
       error: "",
+      errorLabelClass: "first_name_error",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.userSettingssecondName = new Input({
@@ -32,8 +33,8 @@ export class UserSettings extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.userSettingsLogin = new Input({
@@ -45,8 +46,8 @@ export class UserSettings extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.userSettingsEmail = new Input({
@@ -58,8 +59,8 @@ export class UserSettings extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.userSettingsPassword = new Input({
@@ -71,8 +72,8 @@ export class UserSettings extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
     this.children.userSettingsPhone = new Input({
@@ -84,8 +85,8 @@ export class UserSettings extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
 
@@ -98,8 +99,8 @@ export class UserSettings extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
 
@@ -112,8 +113,8 @@ export class UserSettings extends Block {
       error: "",
       value: "",
       events: {
-        focusOut: focusout,
-        focusIn: focusin,
+        focusout: focusout,
+        focusin: focusin,
       },
     });
 
@@ -128,7 +129,6 @@ export class UserSettings extends Block {
   }
 
   protected render(): DocumentFragment {
-    console.log(template);
     return this.compile(template, this.props);
   }
 }
