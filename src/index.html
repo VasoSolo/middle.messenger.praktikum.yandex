@@ -5,22 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Messenger</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.ts"></script>
   </head>
 <body>
-  <main class="appContainer">
+  <div class="container-app">
     <nav>
       <a href="/registration">Регистрация</a>
       <a href="/authorization">Авторизация</a>
       <a href="/userSettings">Настройки пользователя</a>
+      <a href="/chatList">Список чатов</a>
       <a href="/error404">404</a>
       <a href="/error500">500</a>
     </nav>
-    <div id="app"></div>
-    <script src="pages/authorization/index.js" type="module"></script>
-    <script src="pages/registration/index.js" type="module"></script>
-    <script src="pages/userSettings/index.js" type="module"></script>
-    <script src="pages/error/404/index.js" type="module"></script>
-    <script src="pages/error/500/index.js" type="module"></script>
-  </main>
+    <main class="app" id="app"></main>
+  </div>
 </body>
 </html>

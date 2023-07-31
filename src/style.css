@@ -1,14 +1,38 @@
-*{
-    /* padding: 0;
-    margin: 0; */
-}
+@import url("pages/authorization/authorization.css");
+@import url("pages/registration/registration.css");
+@import url("pages/chatList/chatList.css");
+@import url("pages/userSettings/userSettings.css");
+@import url("pages/error/404/error404.css");
+@import url("pages/error/500/error500.css");
 
-.appContainer{
+
+.container-app{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     height: 100%;
-    /* padding-top: 50px; */
-    /* border: 1px solid #000; */
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    flex-grow: 1;
+}
+
+.error{
+    font-family: Arial, sans-serif;
+    padding: 0;
+    color: red;
+    margin: 0;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.error:hover{
+    overflow: visible; 
+    white-space: normal;
+    backdrop-filter: blur(5px);
 }

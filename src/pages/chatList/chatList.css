@@ -1,0 +1,123 @@
+
+.chat-container-big {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 95vh;
+    align-items: stretch;
+}
+
+.profile-button {
+    background-color: rgb(41 128 185);
+    color:  rgb(255 255 255);
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-button .fa-cog {
+    margin-right: 8px;
+}
+
+.chat-list-container {
+    flex: 1;
+    background-color:  rgb(241 241 241);
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-list {
+    flex: 1;
+    padding: 16px;
+}
+
+.chat-list-item {
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    background-color:  rgb(241 241 241);
+    box-shadow: 0 2px 4px rgba(0 0 0 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.chat-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.chat-list-item:hover {
+    background-color:  rgb(245 245 245);
+}
+
+.chat-content {
+    flex: 3;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: rgb(245 245 245);
+    box-shadow: 0 -2px 4px rgba(0 0 0 0.1);
+    overflow-y: auto;
+}
+
+    .message-input {
+        display: flex;
+        align-items: stretch;
+        margin-top: 16px;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+.message-input input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid rgb(204 204 204);
+    flex-grow: 1;
+}
+
+.message-input button {
+    background-color: #27ae60;
+    color: rgb(255 255 255);
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-container input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid rgb(204 204 204);
+}
+
+.search-container .fa-search {
+    margin-right: 8px;
+}
+
+.chat-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.span-container{
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+.chat-list-input{
+    flex-grow: 1;
+}
