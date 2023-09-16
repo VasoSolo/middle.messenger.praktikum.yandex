@@ -1,6 +1,8 @@
 import { EventBus } from "./eventBus";
 import { nanoid } from "nanoid";
 
+export type TProps = Record<string, any>;
+
 class Block {
   static EVENTS = {
     INIT: "init",
@@ -220,7 +222,6 @@ class Block {
   }
 
   _createDocumentElement(tagName: string) {
-    // Можно сделать метод, который через фрагменты в цикле создаёт сразу несколько блоков
     return document.createElement(tagName);
   }
 

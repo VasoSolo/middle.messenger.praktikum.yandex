@@ -3,6 +3,8 @@ import Input from "../../components/input";
 import Block from "../../services/block";
 import template from "./registration.hbs";
 import { focusin, focusout, submit } from "../../services/validation";
+import router from "../../routing/router";
+import { CHAT_PAGE, ERROR_PAGE_404 } from "../../routing/routes";
 
 export class Registration extends Block {
   constructor() {
@@ -94,7 +96,11 @@ export class Registration extends Block {
       buttonClass: "registration-button",
       typeButton: "submit",
       events: {
-        click: submit,
+        click: (event: Event) => {
+          event.preventDefault();
+          console.log("click");
+          submit(event);
+        },
       },
     });
   }
