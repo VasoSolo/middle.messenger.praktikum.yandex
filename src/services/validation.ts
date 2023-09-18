@@ -77,19 +77,20 @@ export const focusout = (event: InputEvent): void => {
   validationCheck(event);
 };
 
-export const submit = (event: Event): void => {
+export const submit = (event: Event): boolean => {
   // console.log(event);
   event.preventDefault();
   let validData: Record<string, string> = {};
   let allIsValid: boolean | undefined = true;
   const formInputs = document.querySelectorAll<HTMLInputElement>(".input");
-  // console.log("formInputs", formInputs);
+  console.log("formInputs", formInputs);
   formInputs.forEach((input: HTMLInputElement) => {
     const error = input.parentElement?.querySelector(".error");
     const currentValidationInput = validationRules[input.name];
     const { regExp } = currentValidationInput;
     if (input.value === "" || !regExp.test(input.value)) {
       console.error(currentValidationInput.errorMessage);
+
       error!.textContent = currentValidationInput.errorMessage;
       allIsValid = false;
     } else {
@@ -99,6 +100,8 @@ export const submit = (event: Event): void => {
   });
   // console.log("allIsValid", allIsValid);
   if (allIsValid) {
-    console.log(validData);
+    return true;
+  } else {
+    return false;
   }
 };
